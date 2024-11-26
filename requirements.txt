@@ -1,0 +1,9 @@
+ipython
+scikit-optimize
+streamlit
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+shap
