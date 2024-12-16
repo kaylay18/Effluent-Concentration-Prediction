@@ -3,6 +3,16 @@
 The purpose of this app is to predict effluent electrical conductivity, which is a good measure for indutries to evaluate and improve the quality of water in order to preserve the environment and protect public health. It's important that the wastewater that is returned to the water cycle is free of harmful pollutants and this metric allows us to determine if a treatment is effective. Although measuring electrical conductivity alone does not indicate the exact concentrations of ions in the water, it gives a broad overview on if there are pollutants in the water and if it is safe. Wastewater treatment plants can utilize this tool to determine if their water treatement is effective and can adjust and optimize their treatment plans accordingly.
 ## Usage
 This app can be run through huggingface (https://huggingface.co/spaces/kaylayi18/EffluentConcentration). The required libraries are listed in the requirement.txt file. The user inputs various parameters and the model predicts the electrical conductivity of the effluent from these inputs. The user can then compare that prediction with the safe/unsafe EC ranges listed below the prediction to determine if treatment was effective and sufficient. The app also includes Deon's checklist and the ethics datacard that discusses and addresses several ethical considerations and concerns at the bottom of the app.
+
+The user inputs are the following:
+- Influent Flowrate: The volume of water that passes through the treatment facility per hour
+- Zinc Concentration: Concentration of zinc which contributes to pollution in bodies of water where wastewater is released
+- pH: The acidity or alkalinity of the water
+- Biochemical Oxygen Demand (BOD): A measure of amount of organic matter in the water
+- Chemical Oxygen Demand (COD): A measure of chemicals that can consume oxygen in the water
+- Total Suspended Solids (TSS): A measure of the amount of particles suspended in the water
+- Volatile Suspended Solids (VSS): A measure of the amount of dissolved organic matter in the water
+- Electrical Conductivity (EC): How many dissolved substances, chemicals, and minerals are in the water (can predict how pure water is based on how many ions conduct
 ## Description
 This repository includes the data preprocessing in google colab, the best/trained machine learning model, and Deon's checklist. The best model identified from training multiple machine learning models is KNN. The datasource for this project is from the Manresa Wastewater Treatment Plant collected from https://github.com/amroohi/Predict-wastewater and https://doi.org/10.1016/j.jenvman.2024.120324, other acknowledgements and references are included in this repository as well. 
 
